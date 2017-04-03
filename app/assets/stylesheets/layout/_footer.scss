@@ -1,1 +1,58 @@
-// Your footer style
+footer{
+  background: #eaeaea;
+  padding: 20px 0px;
+}
+.copy{
+  font-size: 14px;
+  font-weight: 300;
+  color: #929292;
+  padding: 10px 0px;
+  display: inline-block;
+}
+.fb{
+  background: #1976d2;
+}
+.twitter{
+  background: #2CAAE1;
+}
+.google{
+  background: #c62828;
+}
+.rss{
+  background: #ff8f00;
+}
+
+.icon{
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  padding: 8px;
+  display: inline-block;
+  border: 1px solid transparent;
+  font-size: 18px;
+}
+a .icon{
+  color: #dadada;
+}
+/*.social-icon{
+  float: right;
+}*/
+a .icon:hover{
+  background: transparent;
+}
+a .fb:hover{
+  color: #1976d2;
+  border-color: #1976d2;
+}
+a .twitter:hover{
+  color: #2CAAE1;
+  border-color: #2CAAE1;
+}
+a .google:hover{
+  color: #c62828;
+  border-color: #c62828;
+}
+a .rss:hover{
+  color: #ff8f00;
+  border-color: #ff8f00;
+}

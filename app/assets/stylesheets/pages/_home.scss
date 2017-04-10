@@ -40,7 +40,7 @@
 }
 .portfolio-img .port-item{
   width: 100%;
-  height: auto;
+  height: 300px;
   transition: all .6s ease-in-out;
 }
 .portfolio-img:hover .portfolio-img-hover{
@@ -53,14 +53,13 @@
   background: rgba(0, 0, 0, 0.5);
 }
 .portfolio-img-hover{
-
 }
 .plus{
   display: none;
 }
 .portfolio-img:hover .plus{
   display: inline-block;
-  padding-top: 25%;
+  padding-top: 20%;
 }
 .portfolio-img:hover .port-item{
   transform: scale(1.1);

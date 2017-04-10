@@ -17,12 +17,12 @@
     <div class="underline purple"></div>
       <div class="row">
         <% @products.each do |product| %>
-          <div class="col-sm-6 col-xs-12">
+          <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6">
             <div class="portfolio-item">
               <div class="portfolio-img">
                <img src='<%=product.photo%>', class='port-item'>
                 <div class="portfolio-img-hover">
-                  <a href="<%=product.photo%>"><img src="<%= image_path 'plus.png' %>" alt="plus" class="plus"></a>
+                  <a href="<%=product.photo%>"><img src="http://res.cloudinary.com/db6cwsgoc/image/upload/v1491817305/plus_nddo0n.png" alt="plus" class="plus"></a>
                 </div>
               </div>
               <div class="portfolio-item-details">

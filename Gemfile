@@ -18,6 +18,7 @@ gem 'autoprefixer-rails'
 gem 'devise'
 gem 'cloudinary'
 gem 'carrierwave'
+gem 'lightbox2-rails'
 
 group :development, :test do
   gem 'binding_of_caller'

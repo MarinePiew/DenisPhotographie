@@ -23,7 +23,7 @@ class ProductsController < ApplicationController
       if @product.save
         format.html { redirect_to @product, notice: 'La photo a bien été créé.' }
       else
-        format.html { render :new }
+        render :new , alert: "Attention ! Il manque le nom et/ou la description pour créer la photo."
       end
     end
   end

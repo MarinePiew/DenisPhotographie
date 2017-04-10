@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<section class="portfolio-header" id="header">
+</section>
+<section class="section-background">
+  <div class="container">
+    <ol class="breadcrumb">
+    </ol>
+  </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+  <div class="container section-wrapper">
+    <h2 class="section-title black">
+      portfolio
+    </h2>
+    <div class="underline purple"></div>
+      <div class="row">
+        <% @products.each do |product| %>
+          <div class="col-sm-6 col-xs-12">
+            <div class="portfolio-item">
+              <div class="portfolio-img">
+               <img src='<%=product.photo%>', class='port-item'>
+                <div class="portfolio-img-hover">
+                  <a href="<%=product.photo%>"><img src="<%= image_path 'plus.png' %>" alt="plus" class="plus"></a>
+                </div>
+              </div>
+              <div class="portfolio-item-details">
+                <div class="portfolio-item-name">
+                  <%= product.name %><br><small><%= product.description %></small>
+                </div>
+                <% if user_signed_in? %>
+                  <%= link_to 'Modifier', edit_product_path(product) %>
+                  <%= link_to 'Supprimer', product, method: :delete, data: { confirm: 'Êtes-vous sûre?' } %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+</section>

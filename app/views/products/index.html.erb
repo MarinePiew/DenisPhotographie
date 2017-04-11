@@ -7,8 +7,26 @@
   </div>
 </section>
 
+
+<div class="row">
+<div id="filters"">
+  <ul class="clearfix">
+    <li><a href="#" data-filter="*" class="active">
+    <h5>All</h5>
+    </a></li>
+    <li><a href="#" data-filter=".Nature">
+    <h5>Nature</h5>
+    </a></li>
+    <li><a href="#" data-filter=".Agriculture">
+    <h5>Agriculture</h5>
+    </a></li>
+    <li><a href="#" data-filter=".Ville">
+    <h5>Ville</h5>
+    </a></li>
+  </ul>
+</div>
 <section class="portfolio" id="portfolio">
-  <div class="container section-wrapper">
+  <div class="container section-wrapper-portfolio">
     <h2 class="section-title black">
       portfolio
     </h2>
@@ -16,7 +34,7 @@
       <div class="row">
         <% @products.each do |product| %>
           <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6">
-            <div class="portfolio-item">
+            <div class="portfolio-item <%=product.category%>">
               <div class="portfolio-img">
                <img src='<%=product.photo%>', class='port-item'>
                 <div class="portfolio-img-hover">

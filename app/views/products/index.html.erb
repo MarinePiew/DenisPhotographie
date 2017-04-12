@@ -18,25 +18,21 @@
     </h2>
     <div class="row">
       <% @products.each do |product| %>
-      <div class="sets">
-        <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6">
-          <div class="portfolio-img">
-            <a href="#" class="<%=product.category%>" >
-              <img src="<%=product.photo%>" class='port-item'>
-              <div class="portfolio-item-details">
-                <div class="portfolio-item-name">
-                  <%= product.name %><br><small><%= product.description %></small>
-                </div>
-                <% if user_signed_in? %>
-                  <%= link_to 'Modifier', edit_product_path(product) %>
-                  <%= link_to 'Supprimer', product, method: :delete, data: { confirm: 'Êtes-vous sûre?' } %>
-                <% end %>
-              </div>
-            </a>
-            <div class="portfolio-img-hover">
-              <a href="<%=product.photo%>" data-lightbox="gallery"><img src="http://res.cloudinary.com/db6cwsgoc/image/upload/v1491817305/plus_nddo0n.png" alt="plus" class="plus"></a>
+      <div class="sets portfolio-img col-sm-12 col-xs-12 col-md-6 col-lg-6">
+        <a href="#" class="<%=product.category%>" >
+          <img src="<%=product.photo%>" class='port-item'>
+          <div class="portfolio-item-details">
+            <div class="portfolio-item-name">
+              <%= product.name %><br><small><%= product.description %></small>
             </div>
+            <% if user_signed_in? %>
+              <%= link_to 'Modifier', edit_product_path(product) %>
+              <%= link_to 'Supprimer', product, method: :delete, data: { confirm: 'Êtes-vous sûre?' } %>
+            <% end %>
           </div>
+        </a>
+        <div class="portfolio-img-hover">
+          <a href="<%=product.photo%>" data-lightbox="gallery"><img src="http://res.cloudinary.com/db6cwsgoc/image/upload/v1491817305/plus_nddo0n.png" alt="plus" class="plus"></a>
         </div>
       </div>
       <% end %>

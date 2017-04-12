@@ -1,46 +1,28 @@
-<section class="portfolio-header" id="header">
-</section>
 <section class="section-background">
-  <div class="container">
-    <ol class="breadcrumb">
-    </ol>
-  </div>
+  <div class="container breadcrumb"></div>
 </section>
-
 
 <div class="row">
-<div id="filters"">
-  <ul class="clearfix">
-    <li><a href="#" data-filter="*" class="active">
-    <h5>All</h5>
-    </a></li>
-    <li><a href="#" data-filter=".Nature">
-    <h5>Nature</h5>
-    </a></li>
-    <li><a href="#" data-filter=".Agriculture">
-    <h5>Agriculture</h5>
-    </a></li>
-    <li><a href="#" data-filter=".Ville">
-    <h5>Ville</h5>
-    </a></li>
-  </ul>
+  <div class="filters">
+    <a href="#all">ALL</a>
+    <a href="#Nature">NATURE</a>
+    <a href="#Ville">VILLE</a>
+    <a href="#Agriculture">AGRICULTURE</a>
+  </div>
 </div>
-<section class="portfolio" id="portfolio">
+
+<section class="portfolio">
   <div class="container section-wrapper-portfolio">
     <h2 class="section-title black">
       portfolio
     </h2>
-    <div class="underline purple"></div>
-      <div class="row">
-        <% @products.each do |product| %>
-          <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6">
-            <div class="portfolio-item <%=product.category%>">
-              <div class="portfolio-img">
-               <img src='<%=product.photo%>', class='port-item'>
-                <div class="portfolio-img-hover">
-                  <a href="<%=product.photo%>" data-lightbox="gallery"><img src="http://res.cloudinary.com/db6cwsgoc/image/upload/v1491817305/plus_nddo0n.png" alt="plus" class="plus"></a>
-                </div>
-              </div>
+    <div class="row">
+      <% @products.each do |product| %>
+      <div class="sets">
+        <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6">
+          <div class="portfolio-img">
+            <a href="#" class="<%=product.category%>" >
+              <img src="<%=product.photo%>" class='port-item'>
               <div class="portfolio-item-details">
                 <div class="portfolio-item-name">
                   <%= product.name %><br><small><%= product.description %></small>
@@ -50,9 +32,14 @@
                   <%= link_to 'Supprimer', product, method: :delete, data: { confirm: 'Êtes-vous sûre?' } %>
                 <% end %>
               </div>
+            </a>
+            <div class="portfolio-img-hover">
+              <a href="<%=product.photo%>" data-lightbox="gallery"><img src="http://res.cloudinary.com/db6cwsgoc/image/upload/v1491817305/plus_nddo0n.png" alt="plus" class="plus"></a>
             </div>
           </div>
-        <% end %>
+        </div>
       </div>
+      <% end %>
     </div>
+  </div>
 </section>

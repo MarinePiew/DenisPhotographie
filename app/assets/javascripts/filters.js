@@ -4,9 +4,8 @@ $('.filters a').click(function(e) {
   a = a.substr(1);
   $('.sets a').each(function() {
     if (!$(this).hasClass(a) && a != 'all')
-      $(this).addClass('hide');
+      $(this).parent().addClass('hide');
     else
-      $(this).removeClass('hide');
+      $(this).parent().removeClass('hide');
   });
-
 });

@@ -19,6 +19,7 @@ gem 'devise'
 gem 'cloudinary'
 gem 'carrierwave'
 gem 'lightbox2-rails'
+gem 'will_paginate'
 
 group :development, :test do
   gem 'binding_of_caller'

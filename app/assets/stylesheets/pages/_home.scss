@@ -92,3 +92,27 @@
   width: 50px;
   margin: 0px auto 60px;
 }
+
+.pagination {
+  padding-left: 36%;
+}
+
+.pagination a, .pagination span, .pagination em {
+  text-decoration: none;
+  color: black;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+}
+
+.pagination .disabled {
+  color: #EAEAEA;
+}
+
+.pagination .current {
+  font-weight: bold;
+  background: #EAEAEA;
+}
+
+.pagination a:hover, .pagination a:focus {
+  text-decoration: underline;
+}

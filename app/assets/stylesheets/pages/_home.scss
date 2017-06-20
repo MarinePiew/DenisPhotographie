@@ -41,7 +41,13 @@
   font-size: 16px;
   font-weight: 200;
   padding: 0px 145px;
+
+  @media screen and (max-width: 768px){
+    padding: 0px;
+  }
 }
+
+
 .quoter{
   font-size: 20px;
   font-weight: 400;
@@ -95,6 +101,10 @@
 
 .pagination {
   padding-left: 36%;
+
+  @media screen and (max-width: 768px){
+    padding-left: 10%;
+  }
 }
 
 .pagination a, .pagination span, .pagination em {
@@ -116,3 +126,4 @@
 .pagination a:hover, .pagination a:focus {
   text-decoration: underline;
 }
+

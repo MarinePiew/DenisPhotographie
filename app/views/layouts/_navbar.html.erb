@@ -1,30 +1,35 @@
 <nav class="navbar navbar-default">
   <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">Denis Grisel<br><small>Photographie</small></a>
-    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Denis Grisel<br><small>Photographie</small></a>
+        </div>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="/">Accueil</a></li>
-      <li><a href="/A_propos">A propos</a></li>
-      <li><a href="/Portfolio">Portfolio</a></li>
-      <li><a href="/Contact">Contact</a></li>
-      <% if user_signed_in? %>
-        <li><a href =" /products/new">Ajouter des photos</a></li>
-        <li>
-          <%= link_to destroy_user_session_path, method: :delete do %>
-          <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/A_propos">A propos</a></li>
+          <li><a href="/Portfolio">Portfolio</a></li>
+          <li><a href="/Contact">Contact</a></li>
+          <% if user_signed_in? %>
+            <li><a href =" /products/new">Ajouter des photos</a></li>
+            <li>
+              <%= link_to destroy_user_session_path, method: :delete do %>
+              <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+              <% end %>
+            </li>
           <% end %>
-        </li>
-      <% end %>
-    </ul>
+        </ul>
+        </div>
+      </div>
     </div>
   </div>
+
 </nav>

@@ -7,7 +7,7 @@
 }
 .portfolio-img .port-item{
   width: 100%;
-  min-height: 300px;
+  min-height: auto;
   transition: all .6s ease-in-out;
 }
 .portfolio-img:hover .portfolio-img-hover{
@@ -40,4 +40,7 @@
   font-size: 15px;
   margin-right: 305px;
   color: #313131;
+
+  @media screen and (max-width: 768px){
+    margin-right: 0px;  }
 }

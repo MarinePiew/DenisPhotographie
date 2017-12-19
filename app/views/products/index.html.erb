@@ -18,7 +18,7 @@
     </h2>
     <div class="row">
       <% @products.each do |product| %>
-      <div class="sets portfolio-img col-sm-12 col-xs-12 col-md-6 col-lg-6">
+      <div class="sets portfolio-img col-xs-12 col-md-6">
         <a href="#" class="<%=product.category%>" >
           <img src="<%=product.photo%>" class='port-item'>
           <div class="portfolio-item-details">
@@ -37,8 +37,8 @@
       </div>
       <% end %>
       <div class="row">
-        <div class="col-xs-12 col-sm-12">
-          <%= will_paginate @products %>
+        <div class="col-xs-12 col-sm-12 pagination-row" >
+          <%= will_paginate @products, :page_links => false %>
         </div>
       </div>
     </div>

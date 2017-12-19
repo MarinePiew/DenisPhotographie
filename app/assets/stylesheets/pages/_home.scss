@@ -31,8 +31,6 @@
   letter-spacing: 3px;
 }
 
-
-
 .note{
   color: #dadada;
 }
@@ -78,7 +76,6 @@
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 2px;
-  padding-bottom: 40px;
 }
 .section-item-title {
   font-size: 20px;
@@ -98,15 +95,9 @@
   width: 50px;
   margin: 0px auto 60px;
 }
-
-.pagination {
-  padding-left: 36%;
-
-  @media screen and (max-width: 768px){
-    padding-left: 10%;
-  }
+.pagination-row {
+  text-align: center;
 }
-
 .pagination a, .pagination span, .pagination em {
   text-decoration: none;
   color: black;

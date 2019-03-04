@@ -6,8 +6,8 @@
   overflow: hidden;
 }
 .portfolio-img .port-item{
-  width: 97%;
-  min-height: auto;
+  width: 100%;
+  object-fit: contain;
   transition: all .6s ease-in-out;
 }
 .portfolio-img:hover .portfolio-img-hover{
@@ -30,10 +30,10 @@
 
 }
 .portfolio-img:hover .port-item{
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .portfolio-item-details{
-  margin: 20px 0px 50px;
+  margin: 20px;
 }
 .portfolio-item-name{
   display: inline-block;

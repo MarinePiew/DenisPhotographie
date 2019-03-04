@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 ruby '2.3.5'
 
-gem 'rails', '5.0.1'
+gem 'rails'
 gem 'puma'
 gem 'pg'
 gem 'figaro'
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder'
 gem 'redis'
 
 gem 'sass-rails'
@@ -19,7 +19,6 @@ gem 'devise'
 gem 'cloudinary'
 gem 'carrierwave'
 gem 'lightbox2-rails'
-gem 'will_paginate'
 
 group :development, :test do
   gem 'binding_of_caller'
@@ -28,8 +27,9 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
-  gem 'listen', '~> 3.0.5'
+  gem 'listen'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'dotenv-rails'
 end
 
 

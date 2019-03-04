@@ -5,9 +5,12 @@
 <div class="row">
   <div class="filters">
     <a href="#all">ALL</a>
-    <a href="#Nature">NATURE</a>
-    <a href="#Ville">VILLE</a>
-    <a href="#Agriculture">AGRICULTURE</a>
+    <a href="#ruralite">RURALITE</a>
+    <a href="#mer">LA MER</a>
+    <a href="#rue">LA RUE</a>
+    <a href="#voyage">VOYAGES</a>
+    <a href="#portrait">PORTRAITS</a>
+    <a href="#autre">AUTRES</a>
   </div>
 </div>
 
@@ -19,15 +22,15 @@
     <div class="row">
       <% @products.each do |product| %>
       <div class="sets portfolio-img col-xs-12 col-md-6">
-        <a href="#" class="<%=product.category%>" >
+        <a href="#" class="<%=product.category%>">
           <img src="<%=product.photo%>" class='port-item'>
           <div class="portfolio-item-details">
             <div class="portfolio-item-name">
               <%= product.name %><br><small><%= product.description %></small>
             </div>
             <% if user_signed_in? %>
-              <%= link_to 'Modifier', edit_product_path(product) %>
-              <%= link_to 'Supprimer', product, method: :delete, data: { confirm: 'Êtes-vous sûre?' } %>
+              <%= link_to 'Modifier', edit_product_path(product), class: 'btn btn-success' %>
+              <%= link_to 'Supprimer', product, method: :delete, data: { confirm: 'Êtes-vous sûre?' } , class: 'btn btn-danger' %>
             <% end %>
           </div>
         </a>
@@ -36,11 +39,6 @@
         </div>
       </div>
       <% end %>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 pagination-row" >
-          <%= will_paginate @products, :page_links => false %>
-        </div>
-      </div>
     </div>
   </div>
 </section>

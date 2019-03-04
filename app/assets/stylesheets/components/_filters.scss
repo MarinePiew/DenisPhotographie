@@ -1,6 +1,9 @@
 .filters {
-  margin-top: 40px;
-  margin-left: 410px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 40px;
   color: black;
   font-size: 12px;
   letter-spacing: 5px;

@@ -45,105 +45,24 @@
     </h2> <!-- /.section-title -->
     <div class="underline purple"></div>
     <div class="row">
-      <div class="col-sm-4 col-xs-12 col-md-6">
-        <div class="portfolio-item">
-          <div class="portfolio-img">
-            <img src="http://res.cloudinary.com/db6cwsgoc/image/upload/v1520976407/ligvcyktmi95we4jchwn.jpg" alt="port-1" class="port-item">
-            <div class="portfolio-img-hover">
-              <a href="http://res.cloudinary.com/db6cwsgoc/image/upload/v1520976407/ligvcyktmi95we4jchwn.jpg" data-lightbox="gallery"><img src="http://res.cloudinary.com/db6cwsgoc/image/upload/v1491817305/plus_nddo0n.png" alt="plus" class="plus"></a>
+      <% @products.each do |product| %>
+        <div class="col-sm-4 col-xs-12 col-md-6">
+          <div class="portfolio-item">
+            <div class="portfolio-img">
+              <img src="<%=product.photo%>" class='port-item'>
+              <div class="portfolio-img-hover">
+                <a href="<%=product.photo%>" data-lightbox="gallery">
+                  <img src="http://res.cloudinary.com/db6cwsgoc/image/upload/v1491817305/plus_nddo0n.png" alt="plus" class="plus">
+                </a>
+              </div>
             </div>
           </div>
-          <div class="portfolio-item-details">
-            <!-- <div class="portfolio-item-name">
-              Denis Grisel<br><small>Nature</small>
-            </div> -->
-          </div>
         </div>
-      </div>
-      <div class="col-sm-4 col-xs-12 col-md-6">
-        <div class="portfolio-item">
-          <div class="portfolio-img">
-            <img src="http://res.cloudinary.com/db6cwsgoc/image/upload/v1518608286/uks4zdtoziqtw5s07arr.jpg" alt="port-2" class="port-item">
-            <div class="portfolio-img-hover">
-              <a href="http://res.cloudinary.com/db6cwsgoc/image/upload/v1518608286/uks4zdtoziqtw5s07arr.jpg" data-lightbox="gallery"><img src="http://res.cloudinary.com/db6cwsgoc/image/upload/v1491817305/plus_nddo0n.png" alt="plus" class="plus"></a>
-            </div>
-          </div>
-          <div class="portfolio-item-details">
-            <!-- <div class="portfolio-item-name">
-              Denis Grisel <br><small>Photography</small>
-            </div> -->
-          </div>
-        </div>
-      </div>
+      <% end %>
     </div>
-    <div class="row">
-      <div class="col-sm-4 col-xs-12 col-md-6">
-        <div class="portfolio-item">
-          <div class="portfolio-img">
-            <img src="http://res.cloudinary.com/db6cwsgoc/image/upload/v1518607099/mkfwvbdo1clxav5m0qzu.jpg" alt="port-3" class="port-item">
-            <div class="portfolio-img-hover">
-              <a href="http://res.cloudinary.com/db6cwsgoc/image/upload/v1518607099/mkfwvbdo1clxav5m0qzu.jpg" data-lightbox="gallery"><img src="http://res.cloudinary.com/db6cwsgoc/image/upload/v1491817305/plus_nddo0n.png" alt="plus" class="plus"></a>
-            </div>
-          </div>
-          <div class="portfolio-item-details">
-           <!--  <div class="portfolio-item-name">
-              Denis Grisel <br><small>Design</small>
-            </div> -->
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4 col-xs-12 col-md-6">
-        <div class="portfolio-item">
-          <div class="portfolio-img">
-            <img src="http://res.cloudinary.com/db6cwsgoc/image/upload/v1518538303/eg0a0axqy8iimdgrymit.jpg" alt="port-4" class="port-item">
-            <div class="portfolio-img-hover">
-              <a href="http://res.cloudinary.com/db6cwsgoc/image/upload/v1518538303/eg0a0axqy8iimdgrymit.jpg" data-lightbox="gallery"><img src="http://res.cloudinary.com/db6cwsgoc/image/upload/v1491817305/plus_nddo0n.png" alt="plus" class="plus"></a>
-            </div>
-          </div>
-          <div class="portfolio-item-details">
-            <!-- <div class="portfolio-item-name">
-              Denis Grisel <br><small>Photography</small>
-            </div> -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-4 col-xs-12 col-md-6">
-        <div class="portfolio-item">
-          <div class="portfolio-img">
-            <img src="http://res.cloudinary.com/db6cwsgoc/image/upload/v1491903906/tm3tovgc2pokpuww4q2i.jpg" alt="port-5" class="port-item">
-            <div class="portfolio-img-hover">
-              <a href="http://res.cloudinary.com/db6cwsgoc/image/upload/v1491903906/tm3tovgc2pokpuww4q2i.jpg" data-lightbox="gallery"><img src="http://res.cloudinary.com/db6cwsgoc/image/upload/v1491817305/plus_nddo0n.png" alt="plus" class="plus"></a>
-            </div>
-          </div>
-          <div class="portfolio-item-details">
-           <!--  <div class="portfolio-item-name">
-              Denis Grisel <br><small>Photography</small>
-            </div> -->
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4 col-xs-12 col-md-6">
-        <div class="portfolio-item">
-          <div class="portfolio-img">
-            <img src="http://res.cloudinary.com/db6cwsgoc/image/upload/v1518538233/nx74ajyss9c5gogxe0mr.jpg" alt="port-6" class="port-item">
-            <div class="portfolio-img-hover">
-              <a href="http://res.cloudinary.com/db6cwsgoc/image/upload/v1518538233/nx74ajyss9c5gogxe0mr.jpg" data-lightbox="gallery"><img src="http://res.cloudinary.com/db6cwsgoc/image/upload/v1491817305/plus_nddo0n.png" alt="plus" class="plus"></a>
-            </div>
-          </div>
-          <div class="portfolio-item-details">
-            <!-- <div class="portfolio-item-name">
-               Denis Grisel <br><small>Photography</small>
-            </div> -->
-          </div>
-        </div>
-      </div>
-    </div>
-      <div class="button text-center">
-        <a class="btn btn-denis" href="/Portfolio" role="button">En voir plus</a>
-      </div>
+
+    <div class="button text-center">
+      <a class="btn btn-denis" href="/Portfolio" role="button">En voir plus</a>
     </div>
   </div>
 </section>
-</div>

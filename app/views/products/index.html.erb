@@ -1,7 +1,3 @@
-<section class="section-background">
-  <div class="container breadcrumb"></div>
-</section>
-
 <div class="row">
   <div class="filters">
     <a href="#all">ALL</a>
@@ -28,10 +24,12 @@
             <div class="portfolio-item-name">
               <%= product.name %><br><small><%= product.description %></small>
             </div>
-            <% if user_signed_in? %>
-              <%= link_to 'Modifier', edit_product_path(product), class: 'btn btn-success' %>
-              <%= link_to 'Supprimer', product, method: :delete, data: { confirm: 'Êtes-vous sûre?' } , class: 'btn btn-danger' %>
-            <% end %>
+            <div class="portfolio-item-modify">
+              <% if user_signed_in? %>
+                <%= link_to 'Modifier', edit_product_path(product), class: 'btn btn-success' %>
+                <%= link_to 'Supprimer', product, method: :delete, data: { confirm: 'Êtes-vous sûre?' } , class: 'btn btn-danger' %>
+              <% end %>
+            </div>
           </div>
         </a>
         <div class="portfolio-img-hover">
